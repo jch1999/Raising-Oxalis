@@ -40,6 +40,7 @@ public class Oxalis : MonoBehaviour
         {
             PlayerPrefs.SetInt("now_stage",this.now_stage);
             PlayerPrefs.SetFloat("now_Exp",this.now_Exp);
+            PlayerPrefs.Save();
             save_time = 0.0f;
         }
         //update left top UI Bar
