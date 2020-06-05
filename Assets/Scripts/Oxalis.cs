@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Oxalis : MonoBehaviour
 {
-    private float save_time = 0;
+    private float save_time = 0;//for auto save
+
+    private float SpeedTime;
     //for manage Exp
     private float grow_Speed = 3.0f;
     private float[] max=new float[5];// the max_exp of each stage
@@ -38,23 +40,40 @@ public class Oxalis : MonoBehaviour
         {
             PlayerPrefs.SetInt("now_stage",this.now_stage);
             PlayerPrefs.SetFloat("now_Exp",this.now_Exp);
+            save_time = 0.0f;
         }
         //update left top UI Bar
         UIControl.instance.SetValue(now_Exp / Max_Exp);
+        if (now_Exp >= Max_Exp)
+        {
+            oxalis_Grow();
+        }
+
+        if (SpeedTime < 0)
+        {
+            SpeedTime -= Time.deltaTime;
+        }
     }
 
     public float getExpPercentage()
     {
         return now_Exp / Max_Exp;
     }
-
+    //this function will operate when Sprinkler or Nutrient is clicked
     public void growSpeed_Up()
     {
         this.grow_Speed = this.grow_Speed * 2;
     }
-
+    //this functino will operate when the SpeedUp time end
     public void growSpeed_Origin()
     {
         this.grow_Speed = this.grow_Speed / 2;
+    }
+    //this fuction will change image when it graw up
+    void oxalis_Grow()
+    {
+        now_stage += 1;
+        Max_Exp = max[now_stage];
+        now_Exp = 0;
     }
 }
