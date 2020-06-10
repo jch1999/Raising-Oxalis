@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e7471c7bc3e48f8408ba34ff15fec1e5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -314,8 +314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.28288677, y: 0.6531251}
   m_AnchorMax: {x: 0.7152265, y: 0.80625}
-  m_AnchoredPosition: {x: 0.5000305, y: -0.49628}
-  m_SizeDelta: {x: -1.466919, y: 0.9924545}
+  m_AnchoredPosition: {x: 0.5000305, y: -0.49627686}
+  m_SizeDelta: {x: -1.466919, y: 0.99248505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &658254393
 MonoBehaviour:
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!4 &1669663205
 Transform:
