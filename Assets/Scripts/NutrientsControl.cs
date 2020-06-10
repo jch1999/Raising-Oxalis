@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Nutrients : MonoBehaviour
 {
+	public Oxalis oxalis;
 	//for cool time setting
 	private float N_coolTime;
 	private bool N_usable;
@@ -30,6 +31,7 @@ public class Nutrients : MonoBehaviour
 		SetBool("N_usable",N_usable);
 		if(N_usable==true)
 		{
+			button_Text.text=divideMin(N_coolTime)+":"+divideSec(N_coolTime);
 			if(N_coolTime>0)
 			{
 				N_coolTime-=Time.deltaTime;
@@ -68,5 +70,13 @@ public class Nutrients : MonoBehaviour
 			return false;
 		}
 	}
+	int divideMin(float coolTime)
+    {
+    	return  (int)coolTime/60;
+    }
+    int divideSec(float coolTime)
+    {	
+    	return (int)coolTime%60;
+    }
 }
 

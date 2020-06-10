@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Oxalis : MonoBehaviour
 {
-	private float save_time=0;//for auto save
-	//the items
-	public Sprinkler sp;
-	public Nutrients nu;
-	
+	private float save_time=0;//for auto save	
 	//for manage Exp
 	private float grow_Speed=3.0f;
 	private float[] max=new float[5];//the max_exp of each stage
