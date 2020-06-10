@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Oxalis : MonoBehaviour
 {
+	//the items
+	public Sprinkler sp;
+	public Nutrients nu;
+	
 	private float save_time=0;//for auto save
 	//for manage Exp
 	private float grow_Speed=3.0f;
