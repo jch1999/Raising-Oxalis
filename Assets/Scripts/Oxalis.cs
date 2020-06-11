@@ -30,7 +30,7 @@ public class Oxalis : MonoBehaviour
         
     }
 
-	void  fixedUpdate()
+	void  FixedUpdate()
 	{
 		now_Exp+=Time.deltaTime*grow_Speed;
 		save_time+=Time.deltaTime;

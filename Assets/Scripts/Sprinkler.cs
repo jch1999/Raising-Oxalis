@@ -12,7 +12,7 @@ public class Sprinkler : MonoBehaviour
     //Button text
     public Text button_Text;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
     	S_usable =GetBool("S_usable");
     	button_Text.gameObject.SetActive(S_usable);
@@ -22,16 +22,18 @@ public class Sprinkler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            
+	    if (S_usable == true)
+	    {
+		   button_Text.GetComponent<Text>().text=divideMin(S_coolTime)+":"+divideSec(S_coolTime); 
+	    }
     }
-    void fixedUpdate()
+    void FixedUpdate()
     {
         PlayerPrefs.SetFloat("S_cooltime",this.S_coolTime);
     	SetBool("S_usable",S_usable);
     	if(S_usable==true)
-    	{
-			button_Text.text=divideMin(S_coolTime)+":"+divideSec(S_coolTime);
-    		if(S_coolTime>0)
+        {
+	        if(S_coolTime>0)
     		{
     			S_coolTime-=Time.deltaTime;
     		}

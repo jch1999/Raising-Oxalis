@@ -12,7 +12,7 @@ public class Nutrients : MonoBehaviour
 	//Button text
 	public Text button_Text;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 		N_usable =GetBool("N_usable");
 		button_Text.gameObject.SetActive(N_usable);
@@ -23,15 +23,18 @@ public class Nutrients : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       if (N_usable == true)
+       {
+        	button_Text.GetComponent<Text>().text=divideMin(N_coolTime)+":"+divideSec(N_coolTime); 
+       } 
     }
-	void fixedUpdate()
+	void FixedUpdate()
 	{
 		PlayerPrefs.SetFloat("N_cooltime",this.N_coolTime);
 		SetBool("N_usable",N_usable);
 		if(N_usable==true)
 		{
-			button_Text.text=divideMin(N_coolTime)+":"+divideSec(N_coolTime);
+			button_Text.GetComponent<Text>().text=divideMin(N_coolTime)+":"+divideSec(N_coolTime);
 			if(N_coolTime>0)
 			{
 				N_coolTime-=Time.deltaTime;
@@ -51,6 +54,7 @@ public class Nutrients : MonoBehaviour
 		{
 			N_usable=true;
 			button_Text.gameObject.SetActive(N_usable);
+			N_coolTime=3600.0f;
 		}
 	}
 	//for save and loaf the bool date
