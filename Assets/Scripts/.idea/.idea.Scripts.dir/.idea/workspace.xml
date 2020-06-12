@@ -4,6 +4,7 @@
     <list default="true" id="ab3441ce-6def-4777-a474-4085f7518b71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nutrients.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nutrients.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oxalis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Oxalis.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sprinkler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sprinkler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +31,12 @@
         <option value="$PROJECT_DIR$/GameMange.cs" />
         <option value="$PROJECT_DIR$/UIControl.cs" />
         <option value="$PROJECT_DIR$/StartGame.cs" />
-        <option value="$PROJECT_DIR$/Oxalis.cs" />
         <option value="$PROJECT_DIR$/SprinklerControl.cs" />
         <option value="$PROJECT_DIR$/NutrientsControl.cs" />
         <option value="$PROJECT_DIR$/ExitGame.cs" />
-        <option value="$PROJECT_DIR$/Nutrients.cs" />
         <option value="$PROJECT_DIR$/Sprinkler.cs" />
+        <option value="$PROJECT_DIR$/Oxalis.cs" />
+        <option value="$PROJECT_DIR$/Nutrients.cs" />
       </list>
     </option>
   </component>
@@ -64,7 +65,7 @@
       <workItem from="1591749668168" duration="5798000" />
       <workItem from="1591794022882" duration="1909000" />
       <workItem from="1591873852299" duration="1259000" />
-      <workItem from="1591918084441" duration="1216000" />
+      <workItem from="1591918084441" duration="2091000" />
     </task>
     <servers />
   </component>
