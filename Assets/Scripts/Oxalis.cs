@@ -43,6 +43,7 @@ public class Oxalis : MonoBehaviour
 		}
 		//update left top UI Bar
 		UIControl.instance.SetValue(getExpPercentage());
+		SliderControl.SC.setValue(getExpPercentage());
 		if(now_Exp>=Max_Exp)
 		{
 			Oxalis_Grow();
