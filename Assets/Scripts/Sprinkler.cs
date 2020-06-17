@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Sprinkler : MonoBehaviour
 {
 	public Oxalis oxalis;
+    public AudioClip pouring_water;
+    AudioSource audioSource;
     //for cool time setting
     private float S_coolTime;
     private float S_itemTime;
@@ -15,6 +17,7 @@ public class Sprinkler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        audioSource = GetComponent<audioSource>();
     	S_usable =GetBool("S_usable");
     	button_Text.gameObject.SetActive(S_usable);
     	S_coolTime=PlayerPrefs.GetFloat("S_coolTime",0.0f);
@@ -68,6 +71,7 @@ public class Sprinkler : MonoBehaviour
 			S_coolTime=1800.0f;
             oxalis.growSpeed_Up();
             S_itemTime = 180.0f;
+            Playsound(pouring_water);
         }
     }
     //for save and loaf the bool date
@@ -95,4 +99,8 @@ public class Sprinkler : MonoBehaviour
 	{	
 		return (int)coolTime%60;
 	}
+    public void Playsound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 }

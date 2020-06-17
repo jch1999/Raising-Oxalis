@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Nutrients : MonoBehaviour
 {
 	public Oxalis oxalis;
+	public AudioClip nutrient_sound;
+	AudioSource audioSource;
 	//for cool time setting
 	private float N_coolTime;
 	private bool N_usable;
@@ -15,6 +17,7 @@ public class Nutrients : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+		audioSource = GetComponent<audioSource>();
 		N_usable =GetBool("N_usable");
 		button_Text.gameObject.SetActive(N_usable);
 		N_coolTime=PlayerPrefs.GetFloat("N_coolTime",0.0f);
@@ -69,6 +72,7 @@ public class Nutrients : MonoBehaviour
 			N_coolTime=3600.0f;
 			oxalis.growSpeed_Up();
 			N_itemTime = 180.0f;
+			Playsound(nutrient_sound);
 		}
 	}
 	//for save and loaf the bool date
@@ -96,5 +100,9 @@ public class Nutrients : MonoBehaviour
     {	
     	return (int)coolTime%60;
     }
+	public void Playsound(AudioClip clip)
+	{
+		audioSource.PlayOneShot(clip);
+	}
 }
 

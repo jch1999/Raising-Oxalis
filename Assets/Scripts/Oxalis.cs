@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Oxalis : MonoBehaviour
 {
+	public AudioClip grow_sound;
+	AudioSource audioSource;
 	private float save_time=0;//for auto save	
 							  //for manage Exp
 	private float grow_Speed;
@@ -23,7 +25,8 @@ public class Oxalis : MonoBehaviour
 		now_Exp=PlayerPrefs.GetFloat("now_Exp",0.0f);
 		grow_Speed = PlayerPrefs.GetFloat("grow_Speed", 10.0f);
 		Max_Exp=max[now_stage];
-    }
+		audioSource = GetComponent<audioSource>();
+	}
 
     // Update is called once per frame
     void Update()
@@ -68,11 +71,16 @@ public class Oxalis : MonoBehaviour
 		now_stage+=1;
 		Max_Exp=max[now_stage];
 		now_Exp=0;
+		Playsound(grow_sound);
 	}
 	void changeState()
 	{
 		//update left top UI Bar
 		UIControl.instance.SetValue(getExpPercentage());
 		SliderControl.SC.setValue(getExpPercentage());
+	}
+	public void Playsound(AudioClip clip)
+	{
+		audioSource.PlayOneShot(clip);
 	}
 }
