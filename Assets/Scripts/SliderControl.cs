@@ -8,14 +8,15 @@ public class SliderControl : MonoBehaviour
     public static SliderControl SC { get; private set; }
     private Slider slider;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         slider = GetComponent<Slider>();
+        SC = this;
     }
 
     // Update is called once per frame
-    public void setValue(float vlaue)
+    public void setValue(float amount)
     {
-        slider.value = Mathf.MoveTowards(slider.value, vlaue, 0.01f);
+        slider.value = Mathf.MoveTowards(slider.value, amount, 0.01f);
     }
 }
