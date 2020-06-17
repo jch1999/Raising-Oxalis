@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 1260790844}
   - component: {fileID: 1260790846}
   m_Layer: 5
-  m_Name: Image
+  m_Name: oxalis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e637626df878044f8d5d60658c68515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxalis: {fileID: 0}
+  oxalis: {fileID: 1260790846}
   button_Text: {fileID: 267829671}
 --- !u!1 &1404251671
 GameObject:
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf00986ed109214db7d144ae7169a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxalis: {fileID: 0}
+  oxalis: {fileID: 1260790846}
   button_Text: {fileID: 324860546}
 --- !u!1 &1761129340
 GameObject:
