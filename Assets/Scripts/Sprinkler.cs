@@ -8,6 +8,7 @@ public class Sprinkler : MonoBehaviour
 	public Oxalis oxalis;
     //for cool time setting
     private float S_coolTime;
+    private float S_itemTime;
     private bool S_usable;
     //Button text
     public Text button_Text;
@@ -17,6 +18,7 @@ public class Sprinkler : MonoBehaviour
     	S_usable =GetBool("S_usable");
     	button_Text.gameObject.SetActive(S_usable);
     	S_coolTime=PlayerPrefs.GetFloat("S_coolTime",0.0f);
+        S_itemTime = PlayerPrefs.GetFloat("S_itemTime", 0.0f);
     }
     
     // Update is called once per frame
@@ -43,7 +45,18 @@ public class Sprinkler : MonoBehaviour
     		}
     		else
     			S_usable=false;
-    	}
+            if (S_itemTime > 0)
+            {
+                S_itemTime -= Time.deltaTime;
+            }
+            else if (S_itemTime < 0)
+            {
+                S_itemTime = 0.0f;
+            }
+            else
+                oxalis.growSpeed_Origin();
+        }
+        
     }
     	
     public void buttton_clicked()
@@ -53,7 +66,9 @@ public class Sprinkler : MonoBehaviour
     		S_usable=true;
     		button_Text.gameObject.SetActive(S_usable);
 			S_coolTime=1800.0f;
-    	}
+            oxalis.growSpeed_Up();
+            S_itemTime = 180.0f;
+        }
     }
     //for save and loaf the bool date
     public void SetBool(string key, bool state)

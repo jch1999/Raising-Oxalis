@@ -9,6 +9,7 @@ public class Nutrients : MonoBehaviour
 	//for cool time setting
 	private float N_coolTime;
 	private bool N_usable;
+	private float N_itemTime;
 	//Button text
 	public Text button_Text;
     // Start is called before the first frame update
@@ -17,8 +18,8 @@ public class Nutrients : MonoBehaviour
 		N_usable =GetBool("N_usable");
 		button_Text.gameObject.SetActive(N_usable);
 		N_coolTime=PlayerPrefs.GetFloat("N_coolTime",0.0f);
-        
-    }
+		N_itemTime = PlayerPrefs.GetFloat("N_itemTime", 0.0f);
+	}
 
     // Update is called once per frame
     void Update()
@@ -45,7 +46,18 @@ public class Nutrients : MonoBehaviour
 			}
 			else
 				N_usable=false;
+			if (N_itemTime > 0)
+			{
+				N_itemTime -= Time.deltaTime;
+			}
+			else if (N_itemTime < 0)
+			{
+				N_itemTime = 0.0f;
+			}
+			else
+				oxalis.growSpeed_Origin();
 		}
+		
 	}
 	
 	public void buttton_clicked()
@@ -55,6 +67,8 @@ public class Nutrients : MonoBehaviour
 			N_usable=true;
 			button_Text.gameObject.SetActive(N_usable);
 			N_coolTime=3600.0f;
+			oxalis.growSpeed_Up();
+			N_itemTime = 180.0f;
 		}
 	}
 	//for save and loaf the bool date

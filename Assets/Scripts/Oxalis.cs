@@ -5,8 +5,8 @@ using UnityEngine;
 public class Oxalis : MonoBehaviour
 {
 	private float save_time=0;//for auto save	
-	//for manage Exp
-	private float grow_Speed=3.0f;
+							  //for manage Exp
+	private float grow_Speed;
 	private float[] max=new float[5];//the max_exp of each stage
 	private int now_stage;
 	float now_Exp;
@@ -21,6 +21,7 @@ public class Oxalis : MonoBehaviour
 		max[4]=5000.0f;
 		now_stage=PlayerPrefs.GetInt("now_stage",0);
 		now_Exp=PlayerPrefs.GetFloat("now_Exp",0.0f);
+		grow_Speed = PlayerPrefs.GetFloat("grow_Speed", 10.0f);
 		Max_Exp=max[now_stage];
     }
 
