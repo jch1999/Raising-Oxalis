@@ -41,9 +41,7 @@ public class Oxalis : MonoBehaviour
 			PlayerPrefs.Save();
 			save_time=0.0f;
 		}
-		//update left top UI Bar
-		UIControl.instance.SetValue(getExpPercentage());
-		SliderControl.SC.setValue(getExpPercentage());
+		changeState();
 		if(now_Exp>=Max_Exp)
 		{
 			Oxalis_Grow();
@@ -69,5 +67,11 @@ public class Oxalis : MonoBehaviour
 		now_stage+=1;
 		Max_Exp=max[now_stage];
 		now_Exp=0;
+	}
+	void changeState()
+	{
+		//update left top UI Bar
+		UIControl.instance.SetValue(getExpPercentage());
+		SliderControl.SC.setValue(getExpPercentage());
 	}
 }
