@@ -25,7 +25,7 @@ public class Oxalis : MonoBehaviour
 		now_Exp=PlayerPrefs.GetFloat("now_Exp",0.0f);
 		grow_Speed = PlayerPrefs.GetFloat("grow_Speed", 10.0f);
 		Max_Exp=max[now_stage];
-		audioSource = GetComponent<audioSource>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame

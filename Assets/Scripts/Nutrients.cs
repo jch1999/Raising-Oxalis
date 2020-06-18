@@ -17,11 +17,12 @@ public class Nutrients : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-		audioSource = GetComponent<audioSource>();
 		N_usable =GetBool("N_usable");
 		button_Text.gameObject.SetActive(N_usable);
 		N_coolTime=PlayerPrefs.GetFloat("N_coolTime",0.0f);
 		N_itemTime = PlayerPrefs.GetFloat("N_itemTime", 0.0f);
+		PlayerPrefs.Save();;
+		audioSource = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame

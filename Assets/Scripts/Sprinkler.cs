@@ -17,9 +17,9 @@ public class Sprinkler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        audioSource = GetComponent<audioSource>();
+        audioSource = GetComponent<AudioSource>();
     	S_usable =GetBool("S_usable");
-    	button_Text.gameObject.SetActive(S_usable);
+    	button_Text.gameObject.SetActive(GetBool("S_usable"));
     	S_coolTime=PlayerPrefs.GetFloat("S_coolTime",0.0f);
         S_itemTime = PlayerPrefs.GetFloat("S_itemTime", 0.0f);
     }
