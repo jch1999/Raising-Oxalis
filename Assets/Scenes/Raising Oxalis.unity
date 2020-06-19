@@ -1286,6 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40095de7e7c68bb44b2f25c1d679156f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grow_sound: {fileID: 8300000, guid: 26d2c8f278d2a144eb549a9c262f9f93, type: 3}
 --- !u!82 &1260790847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1424,18 +1425,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1260790844}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1260790847}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1376859169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,8 +1438,8 @@ GameObject:
   - component: {fileID: 1376859173}
   - component: {fileID: 1376859172}
   - component: {fileID: 1376859171}
-  - component: {fileID: 1376859174}
   - component: {fileID: 1376859175}
+  - component: {fileID: 1376859174}
   m_Layer: 5
   m_Name: ' Nutrients'
   m_TagString: Untagged
@@ -1520,17 +1510,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1376859175}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1376859174}
         m_MethodName: buttton_clicked
         m_Mode: 1
@@ -1591,8 +1570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e637626df878044f8d5d60658c68515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxalis: {fileID: 0}
-  button_Text: {fileID: 0}
+  oxalis: {fileID: 1260790846}
+  nutrient_sound: {fileID: 8300000, guid: 609d8ef12653bee4da2b3126ff5c153f, type: 3}
+  button_Text: {fileID: 267829671}
 --- !u!82 &1376859175
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1789,8 +1769,8 @@ GameObject:
   - component: {fileID: 1498356408}
   - component: {fileID: 1498356407}
   - component: {fileID: 1498356406}
-  - component: {fileID: 1498356409}
   - component: {fileID: 1498356410}
+  - component: {fileID: 1498356409}
   m_Layer: 5
   m_Name: Sprinkler
   m_TagString: Untagged
@@ -1860,29 +1840,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1498356407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1498356410}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1498356409}
-        m_MethodName: buttton_clicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1498356407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1932,8 +1890,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf00986ed109214db7d144ae7169a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxalis: {fileID: 0}
-  button_Text: {fileID: 0}
+  oxalis: {fileID: 1260790846}
+  pouring_water: {fileID: 8300000, guid: c7ab39cb0631fdc4a91ca0739ca7cc51, type: 3}
+  button_Text: {fileID: 324860546}
 --- !u!82 &1498356410
 AudioSource:
   m_ObjectHideFlags: 0
