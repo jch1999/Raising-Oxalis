@@ -61,7 +61,6 @@ public class Sprinkler : MonoBehaviour
             else
                 oxalis.growSpeed_Origin();
         }
-        SetBool("S_usable", S_usable);
     }
     	
     public void buttton_clicked()
@@ -69,10 +68,11 @@ public class Sprinkler : MonoBehaviour
     	if(S_usable==false)
     	{
     		S_usable=true;
-    		button_Text.gameObject.SetActive(S_usable);
-			S_coolTime=1800.0f;
+            SetBool("S_usable", S_usable);
+            S_coolTime = 1800.0f;
             oxalis.growSpeed_Up();
             S_itemTime = 180.0f;
+            button_Text.gameObject.SetActive(S_usable);
             Playsound(pouring_water);
         }
     }

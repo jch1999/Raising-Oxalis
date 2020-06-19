@@ -18,24 +18,27 @@ public class Nutrients : MonoBehaviour
     void Awake()
     {
 		N_usable =GetBool("N_usable");
-		
+		N_coolTime = PlayerPrefs.GetFloat("N_coolTime", 0.0f);
+		N_itemTime = PlayerPrefs.GetFloat("N_itemTime", 0.0f);
 		audioSource = GetComponent<AudioSource>();
 	}
 	void start()
 	{
 		button_Text.gameObject.SetActive(N_usable);
-		N_coolTime = PlayerPrefs.GetFloat("N_coolTime", 0.0f);
-		N_itemTime = PlayerPrefs.GetFloat("N_itemTime", 0.0f);
 	}
-    // Update is called once per frame
-    void Update()
-    {
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		if (N_usable == true)
+		{
+			button_Text.GetComponent<Text>().text = divideMin(N_coolTime) + ":" + divideSec(N_coolTime);
+
+		}
+	}
 	void FixedUpdate()
 	{
 		if (N_usable==true)
 		{
-			button_Text.GetComponent<Text>().text=divideMin(N_coolTime)+":"+divideSec(N_coolTime);
 			if (N_coolTime > 0)
 			{
 				N_coolTime -= Time.deltaTime;
@@ -60,7 +63,6 @@ public class Nutrients : MonoBehaviour
 			else
 				oxalis.growSpeed_Origin();
 		}
-		SetBool("N_usable", N_usable);
 		PlayerPrefs.SetFloat("N_cooltime", this.N_coolTime);
 	}
 	
@@ -70,10 +72,10 @@ public class Nutrients : MonoBehaviour
 		{
 			N_usable=true;
 			SetBool("N_usable",N_usable);
-			button_Text.gameObject.SetActive(N_usable);
-			N_coolTime=3600.0f;
+			N_coolTime = 3600.0f;
 			oxalis.growSpeed_Up();
 			N_itemTime = 180.0f;
+			button_Text.gameObject.SetActive(N_usable);
 			Playsound(nutrient_sound);
 		}
 	}
