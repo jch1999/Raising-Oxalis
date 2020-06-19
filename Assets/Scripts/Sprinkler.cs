@@ -17,9 +17,8 @@ public class Sprinkler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        S_usable = GetBool("S_usable");
         audioSource = GetComponent<AudioSource>();
-    	S_usable =GetBool("S_usable");
-    	
     }
     void start()
     {
@@ -50,6 +49,7 @@ public class Sprinkler : MonoBehaviour
     		}
     		else
     			S_usable=false;
+
             if (S_itemTime > 0)
             {
                 S_itemTime -= Time.deltaTime;
@@ -69,9 +69,9 @@ public class Sprinkler : MonoBehaviour
     	{
     		S_usable=true;
             SetBool("S_usable", S_usable);
-            S_coolTime = 1800.0f;
+            S_coolTime = 18.0f;
             oxalis.growSpeed_Up();
-            S_itemTime = 180.0f;
+            S_itemTime = 18.0f;
             button_Text.gameObject.SetActive(S_usable);
             Playsound(pouring_water);
         }
