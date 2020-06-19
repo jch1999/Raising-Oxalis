@@ -19,11 +19,14 @@ public class Sprinkler : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     	S_usable =GetBool("S_usable");
-    	button_Text.gameObject.SetActive(GetBool("S_usable"));
-    	S_coolTime=PlayerPrefs.GetFloat("S_coolTime",0.0f);
+    	
+    }
+    void start()
+    {
+        button_Text.gameObject.SetActive(S_usable);
+        S_coolTime = PlayerPrefs.GetFloat("S_coolTime", 0.0f);
         S_itemTime = PlayerPrefs.GetFloat("S_itemTime", 0.0f);
     }
-    
     // Update is called once per frame
     void Update()
     {
@@ -34,9 +37,8 @@ public class Sprinkler : MonoBehaviour
     }
     void FixedUpdate()
     {
-        PlayerPrefs.SetFloat("S_cooltime",this.S_coolTime);
-    	SetBool("S_usable",S_usable);
-    	if(S_usable==true)
+        PlayerPrefs.SetFloat("S_cooltime", this.S_coolTime);
+        if (S_usable==true)
         {
 	        if(S_coolTime>0)
     		{
@@ -59,7 +61,7 @@ public class Sprinkler : MonoBehaviour
             else
                 oxalis.growSpeed_Origin();
         }
-        
+        SetBool("S_usable", S_usable);
     }
     	
     public void buttton_clicked()
