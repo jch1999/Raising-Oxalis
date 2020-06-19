@@ -31,14 +31,10 @@ public class Nutrients : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (N_usable == true)
-		{
-			button_Text.GetComponent<Text>().text = divideMin(N_coolTime) + ":" + divideSec(N_coolTime);
-
-		}
 	}
 	void FixedUpdate()
 	{
+		button_Text.GetComponent<Text>().text = divideMin(N_coolTime) + ":" + divideSec(N_coolTime);
 		if (N_usable==true)
 		{
 			if (N_coolTime > 0)
@@ -56,7 +52,7 @@ public class Nutrients : MonoBehaviour
 				button_Text.gameObject.SetActive(N_usable);
 			}
 		}
-		if(N_itemActive=true)
+		if(N_itemActive==true)
         {
 			if (N_itemTime > 0)
 			{
@@ -69,11 +65,14 @@ public class Nutrients : MonoBehaviour
 			else
 			{
 				N_itemActive = false;
+				SetBool("N_itemActive", N_itemActive);
 				oxalis.growSpeed_Origin();
 			}
 		}
 		PlayerPrefs.SetFloat("N_cooltime", this.N_coolTime);
 		SetBool("N_usable", N_usable);
+		PlayerPrefs.SetFloat("N_itemTime", N_itemTime);
+		SetBool("N_itemActive", N_itemActive);
 		PlayerPrefs.Save();
 	}
 	
