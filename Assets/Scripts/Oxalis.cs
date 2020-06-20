@@ -23,9 +23,7 @@ public class Oxalis : MonoBehaviour
 		max[4]=5000.0f;
 		now_stage=PlayerPrefs.GetInt("now_stage",0);
 		now_Exp=PlayerPrefs.GetFloat("now_Exp",0.0f);
-		grow_Speed = 10.0f;
-		PlayerPrefs.SetFloat("grow_Speed", grow_Speed);
-		//grow_Speed = PlayerPrefs.GetFloat("grow_Speed", 10.0f);
+		grow_Speed = PlayerPrefs.GetFloat("grow_Speed", 10.0f);
 		Max_Exp=max[now_stage];
 		audioSource = GetComponent<AudioSource>();
 	}
