@@ -49,6 +49,7 @@ public class Nutrients : MonoBehaviour
 			{
 				N_usable = false;
 				SetBool("N_usable",N_usable);
+				PlayerPrefs.Save();
 				button_Text.gameObject.SetActive(N_usable);
 			}
 		}
@@ -66,6 +67,7 @@ public class Nutrients : MonoBehaviour
 			{
 				N_itemActive = false;
 				SetBool("N_itemActive", N_itemActive);
+				PlayerPrefs.Save();
 				oxalis.growSpeed_Origin();
 			}
 		}
@@ -87,6 +89,7 @@ public class Nutrients : MonoBehaviour
 			N_coolTime = 6.0f;
 			oxalis.growSpeed_Up();
 			N_itemTime = 3.0f;
+			PlayerPrefs.Save();
 			button_Text.gameObject.SetActive(N_usable);
 			Playsound(nutrient_sound);
 		}

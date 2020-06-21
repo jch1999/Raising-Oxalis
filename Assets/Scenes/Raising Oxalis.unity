@@ -1363,6 +1363,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40095de7e7c68bb44b2f25c1d679156f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  day: {fileID: 676386002}
+  night: {fileID: 1763110222}
+  LV1: {fileID: 21300000, guid: bf4f92b04a067a54382bb25ea7984dcd, type: 3}
+  LV2: {fileID: 21300000, guid: 7230b2ba21031084abb2e39ba8b1a05c, type: 3}
+  LV3: {fileID: 0}
+  LV4: {fileID: 0}
+  LV5: {fileID: 0}
   grow_sound: {fileID: 8300000, guid: 26d2c8f278d2a144eb549a9c262f9f93, type: 3}
 --- !u!82 &1260790847
 AudioSource:
@@ -1390,7 +1397,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2452,6 +2459,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40095de7e7c68bb44b2f25c1d679156f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  day: {fileID: 0}
+  night: {fileID: 0}
+  LV1: {fileID: 0}
+  LV2: {fileID: 0}
+  LV3: {fileID: 0}
+  LV4: {fileID: 0}
+  LV5: {fileID: 0}
   grow_sound: {fileID: 8300000, guid: 26d2c8f278d2a144eb549a9c262f9f93, type: 3}
 --- !u!114 &2035695817
 MonoBehaviour:

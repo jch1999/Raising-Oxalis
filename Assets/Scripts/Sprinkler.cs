@@ -50,6 +50,7 @@ public class Sprinkler : MonoBehaviour
             {
                 S_usable = false;
                 SetBool("S_usable", S_usable);
+                PlayerPrefs.Save();
                 button_Text.gameObject.SetActive(S_usable);
             }
 
@@ -70,6 +71,7 @@ public class Sprinkler : MonoBehaviour
                 S_itemActive = false;
                 oxalis.growSpeed_Origin();
                 SetBool("S_itemActive", S_itemActive);
+                PlayerPrefs.Save();
             }
         }
         PlayerPrefs.SetFloat("S_cooltime", this.S_coolTime);
