@@ -72,18 +72,23 @@ public class Oxalis : MonoBehaviour
 		{
 			case 0:
 				now.sprite = LV1;
+				UIControl.instance.SetStatus(LV1);
 				break;
 			case 1:
 				now.sprite = LV2;
+				UIControl.instance.SetStatus(LV2);
 				break;
 			case 2:
 				now.sprite = LV3;
+				UIControl.instance.SetStatus(LV3);
 				break;
 			case 3:
 				now.sprite = LV4;
+				UIControl.instance.SetStatus(LV4);
 				break;
 			case 4:
 				now.sprite = LV5;
+				UIControl.instance.SetStatus(LV5);
 				break;
 		}
 		//배경 이미지 변경 - 시간변화

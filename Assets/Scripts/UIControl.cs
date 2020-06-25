@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIControl : MonoBehaviour
 {
     public static UIControl instance { get; private set; }
-    public Image mask;
+    public Image mask, state;
     private float originalSize;
     
     void Awake() 
@@ -22,5 +22,9 @@ public class UIControl : MonoBehaviour
     public void SetValue(float value) 
     {
         mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,originalSize*value); 
+    }
+    public void SetStatus(Sprite now_stage)
+    {
+        state.sprite = now_stage;
     }
 }
