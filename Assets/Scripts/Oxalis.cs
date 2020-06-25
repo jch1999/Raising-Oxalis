@@ -65,7 +65,13 @@ public class Oxalis : MonoBehaviour
 		//성장단계 변화
 		if (now_Exp>=Max_Exp)
 		{
-			Oxalis_Grow();
+			if(now_stage<4)
+				Oxalis_Grow();
+			else
+            {
+				grow_Speed = 0.0f;
+				now_Exp = Max_Exp;
+            }
 		}
 		//성장 이미지 지정
 		switch (now_stage)
