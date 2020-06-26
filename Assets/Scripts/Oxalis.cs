@@ -9,6 +9,7 @@ public class Oxalis : MonoBehaviour
 	//시간의 변환 표현
 	public Image day, night;
 	private float time;
+	public ParticleSystem growUp_Particle;
 	//레벨업 마다 이미지 변경을 위한 컴포넌트 지정
 	Image now;
 	public Sprite LV1, LV2, LV3, LV4, LV5;
@@ -131,6 +132,7 @@ public class Oxalis : MonoBehaviour
 		now_stage+=1;
 		Max_Exp=max[now_stage];
 		now_Exp=0;
+		growUp_Particle.Play();
 		Playsound(grow_sound);
 	}
 	void changeState()

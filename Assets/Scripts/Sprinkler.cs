@@ -7,6 +7,7 @@ public class Sprinkler : MonoBehaviour
 {
 	public Oxalis oxalis;
     public AudioClip pouring_water;
+    public ParticleSystem sprinkler, Oxalis_Sprinkler;
     AudioSource audioSource;
     //for cool time setting
     private float S_coolTime;
@@ -86,6 +87,8 @@ public class Sprinkler : MonoBehaviour
     	if(S_usable==false)
     	{
     		S_usable=true;
+            sprinkler.Play();
+            Oxalis_Sprinkler.Play();
             SetBool("S_usable", S_usable);
             S_itemActive = true;
             SetBool("S_itemActive", S_itemActive);

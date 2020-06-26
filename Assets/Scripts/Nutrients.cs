@@ -7,6 +7,7 @@ public class Nutrients : MonoBehaviour
 {
 	public Oxalis oxalis;
 	public AudioClip nutrient_sound;
+	public ParticleSystem nutrients, Oxalis_Nutrients;
 	AudioSource audioSource;
 	//for cool time setting
 	private float N_coolTime;
@@ -83,6 +84,8 @@ public class Nutrients : MonoBehaviour
 		if(N_usable==false)
 		{
 			N_usable=true;
+			nutrients.Play();
+			Oxalis_Nutrients.Play();
 			SetBool("N_usable",N_usable);
 			N_itemActive = true;
 			SetBool("N_itemActive", N_itemActive);
