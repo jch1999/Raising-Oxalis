@@ -136,7 +136,6 @@ public class Oxalis : MonoBehaviour
 	void changeState()
 	{
 		//update left top UI Bar
-		UIControl.instance.SetValue(getExpPercentage());
 		SliderControl.SC.setValue(getExpPercentage());
 	}
 	public void Playsound(AudioClip clip)
