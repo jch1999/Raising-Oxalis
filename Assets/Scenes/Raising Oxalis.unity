@@ -5436,7 +5436,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6df7ac0322971884a8736378d91f465a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7034,7 +7034,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5cfd1c963d6f4934d80c2fd8dfa32723, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7314,6 +7314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3786518423825188007, guid: 8aca851814210fe4d9eafaae55384e2f,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6419925858545807814, guid: 8aca851814210fe4d9eafaae55384e2f,
         type: 3}
