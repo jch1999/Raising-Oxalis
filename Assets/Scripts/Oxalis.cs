@@ -26,11 +26,11 @@ public class Oxalis : MonoBehaviour
     // Awake is called when the program was started
     void Awake()
     {
-        max[0]=500.0f;
-		max[1]=1200.0f;
-		max[2]=2400.0f;
-		max[3]=3600.0f;
-		max[4]=5000.0f;
+        max[0]=2000.0f;
+		max[1]=4800.0f;
+		max[2]=9600.0f;
+		max[3]=14400.0f;
+		max[4]=20000.0f;
 		now = gameObject.GetComponent<Image>();
 		now_stage =PlayerPrefs.GetInt("now_stage",0);
 		now_Exp=PlayerPrefs.GetFloat("now_Exp",0.0f);

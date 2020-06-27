@@ -89,9 +89,9 @@ public class Nutrients : MonoBehaviour
 			SetBool("N_usable",N_usable);
 			N_itemActive = true;
 			SetBool("N_itemActive", N_itemActive);
-			N_coolTime = 6.0f;
+			N_coolTime = 360.0f;
 			oxalis.growSpeed_Up();
-			N_itemTime = 3.0f;
+			N_itemTime = 180.0f;
 			PlayerPrefs.Save();
 			button_Text.gameObject.SetActive(N_usable);
 			Playsound(nutrient_sound);

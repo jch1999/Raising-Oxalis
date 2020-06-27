@@ -7290,6 +7290,31 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3786518423825188007, guid: 8aca851814210fe4d9eafaae55384e2f,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3786518423825188007, guid: 8aca851814210fe4d9eafaae55384e2f,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3786518423825188007, guid: 8aca851814210fe4d9eafaae55384e2f,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3786518423825188007, guid: 8aca851814210fe4d9eafaae55384e2f,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3786518423825188007, guid: 8aca851814210fe4d9eafaae55384e2f,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 6419925858545807814, guid: 8aca851814210fe4d9eafaae55384e2f,
         type: 3}
       propertyPath: m_Name

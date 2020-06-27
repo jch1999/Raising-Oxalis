@@ -92,9 +92,9 @@ public class Sprinkler : MonoBehaviour
             SetBool("S_usable", S_usable);
             S_itemActive = true;
             SetBool("S_itemActive", S_itemActive);
-            S_coolTime = 18.0f;
+            S_coolTime = 180.0f;
             oxalis.growSpeed_Up();
-            S_itemTime = 18.0f;
+            S_itemTime = 90.0f;
             button_Text.gameObject.SetActive(S_usable);
             Playsound(pouring_water);
         }
